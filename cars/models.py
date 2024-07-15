@@ -27,7 +27,7 @@ class Cars(BaseModel):
 
 class Space(BaseModel):
     space_box = models.CharField(_("space_identity"),max_length=10)
-
+    status = models.BooleanField(_("space status"),default=False)
     def __str__(self):
         return self.space_box
 

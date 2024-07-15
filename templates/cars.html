@@ -1,0 +1,32 @@
+{% if park_slot %} 
+<div class="container">
+  
+  <table class='table'>
+    <thead>
+      <tr>
+        <th scope="col">Token</th>
+        <th scope="col">Brand</th>
+        <th scope="col">Color</th>
+        <th scope="col">Liscense No</th>
+        <th scope="col">Space</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for park in park_slot %}
+      <tr>
+        <td>{{park.id}}</td>
+        <td>{{park.car.brand}}</td>
+        <td>{{park.car.color}}</td>
+        <td>{{park.car.liscense_no}}</td>
+        <td>{{park.space.space_box}}</td>
+        <td>{{park.date}}</td>
+        <td>
+            {% include 'park_modal.html' %}
+    </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
