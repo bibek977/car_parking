@@ -10,7 +10,14 @@
 
 {% comment %} {% if spaces %}  {% endcomment %}
 <div class="container">
-  
+  {% if messages %}
+  {% for m in messages %}
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>{{m.tags}} : {{m}}</strong> 
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
+  {% endif %}
   <table class='table'>
     <thead>
       <tr>
@@ -28,15 +35,17 @@
       <tr>
         <td>{{space.space_box}}</td>
         <td>{{space.status}}</td>
-        <td>
+        {% comment %} <td>
           <a href="{% url 'space_update' space.id %}">
             <button type="submit" class="btn btn-primary">Edit</button>
           </a>
-        </td>
+        </td> {% endcomment %}
         <td>
-          <button type="submit" class="btn btn-danger">
-            <a href="{% url 'space_delete' space.id %}">Delete</a>
-          </button>
+          <a href="{% url 'space_delete' space.id %}">
+              <button type="submit" class="btn btn-danger">
+              Delete
+            </button>
+            </a>
         </td>
       </tr>
       {% endfor %}

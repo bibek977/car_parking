@@ -12,7 +12,7 @@
     <div class="card">
       <div class="card-body">
         <form action="" method="post">
-          {% csrf_token %} {{car.non_field_errors}} {% for field in car %}
+          {% csrf_token %} {{car_form.non_field_errors}} {% for field in car_form %}
           <div class="mb-3">
               <label for="liscense" class="form-label">
                   {{field.label_tag}}

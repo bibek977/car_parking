@@ -6,13 +6,21 @@
 
 {% comment %} {% if car %}  {% endcomment %}
 <div class="container">
-  
+  {% if messages %}
+  {% for m in messages %}
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>{{m.tags}} : {{m}}</strong> 
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
+  {% endif %}
   <table class='table'>
     <thead>
       <tr>
         <th scope="col">Brand</th>
         <th scope="col">Color</th>
         <th scope="col">Liscense No</th>
+        <th scope="col">Park Status</th>
         <th scope="col">
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Create
@@ -26,15 +34,18 @@
         <td>{{c.brand}}</td>
         <td>{{c.color}}</td>
         <td>{{c.liscense_no}}</td>
-        <td>
+        <td>{{c.status}}</td>
+        {% comment %} <td>
           <a href="{% url 'car_update' c.id %}">
             <button type="submit" class="btn btn-primary">Edit</button>
           </a>
-        </td>
+        </td> {% endcomment %}
         <td>
-          <button type="submit" class="btn btn-danger">
-            <a href="{% url 'car_delete' c.id %}">Delete</a>
-          </button>
+          <a href="{% url 'car_delete' c.id %}">
+              <button type="submit" class="btn btn-danger">
+              Delete
+            </button>
+            </a>
         </td>
       </tr>
       {% endfor %}
