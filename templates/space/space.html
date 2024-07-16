@@ -8,7 +8,7 @@
 
 {% block body %}
 
-{% if spaces %} 
+{% comment %} {% if spaces %}  {% endcomment %}
 <div class="container">
   
   <table class='table'>
@@ -16,6 +16,11 @@
       <tr>
         <th scope="col">Space</th>
         <th scope="col">Status</th>
+        <th scope="col">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Create
+          </button>
+        </th>
       </tr>
     </thead>
     <tbody>
@@ -24,9 +29,13 @@
         <td>{{space.space_box}}</td>
         <td>{{space.status}}</td>
         <td>
-
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Edit
+          <a href="{% url 'space_update' space.id %}">
+            <button type="submit" class="btn btn-primary">Edit</button>
+          </a>
+        </td>
+        <td>
+          <button type="submit" class="btn btn-danger">
+            <a href="{% url 'space_delete' space.id %}">Delete</a>
           </button>
         </td>
       </tr>
@@ -34,7 +43,7 @@
     </tbody>
   </table>
 </div>
-{% endif %}
+{% comment %} {% endif %} {% endcomment %}
 
 
   
@@ -47,11 +56,10 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                {% include 'space.html' %}
+                {% include 'space/space_create.html' %}
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              {% comment %} <button type="button" class="btn btn-primary">Save changes</button> {% endcomment %}
             </div>
           </div>
         </div>

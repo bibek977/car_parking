@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+  
+
+{% comment %} {% if car %}  {% endcomment %}
+<div class="container">
+  
+  <table class='table'>
+    <thead>
+      <tr>
+        <th scope="col">Brand</th>
+        <th scope="col">Color</th>
+        <th scope="col">Liscense No</th>
+        <th scope="col">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Create
+          </button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for c in car %}
+      <tr>
+        <td>{{c.brand}}</td>
+        <td>{{c.color}}</td>
+        <td>{{c.liscense_no}}</td>
+        <td>
+          <a href="{% url 'car_update' c.id %}">
+            <button type="submit" class="btn btn-primary">Edit</button>
+          </a>
+        </td>
+        <td>
+          <button type="submit" class="btn btn-danger">
+            <a href="{% url 'car_delete' c.id %}">Delete</a>
+          </button>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Park Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          {% include 'car/car_create.html' %}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% comment %} {% endif %} {% endcomment %}
+
+{% endblock body %}

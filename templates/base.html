@@ -14,13 +14,38 @@
         {% endblock title %}
             
     </title>
+    <style>
+        .nav-class{
+            box-sizing:border-box;
+            background-color:black;
+            color:white;
+        }
+        .nav-item a{
+            color:white;
+            font-weight:700;
+        }
+    </style>
 </head>
 <body>
-   
+    <div class="container-fluid nav-class">
+
+        <ul class="nav">
+            <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'car' %}">Cars</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'space' %}">Space</a>
+        </li>
+        
+    </ul>
+</div>
     {% block body %}
-        
+    
     {% endblock body %}
-        
+    
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

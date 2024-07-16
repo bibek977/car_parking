@@ -4,6 +4,9 @@ from django.utils.translation import gettext_lazy as _
 from datetime import date
 from django.utils import timezone
 
+def today_date():
+    return date.today()
+
 class BaseModel(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4,editable=False)
     created_at = models.DateField(auto_now=True)
@@ -28,14 +31,23 @@ class Cars(BaseModel):
 class Space(BaseModel):
     space_box = models.CharField(_("space_identity"),max_length=10)
     status = models.BooleanField(_("space status"),default=False)
+
     def __str__(self):
         return self.space_box
+
+    class Meta:
+        verbose_name_plural = "Space"
+        verbose_name_plural = "Space"
 
 
 class ParkSlot(BaseModel):
     car = models.ForeignKey(Cars,on_delete=models.CASCADE)
     space = models.ForeignKey(Space,on_delete=models.CASCADE)
-    date = models.DateField(default=date.today())
+    date = models.DateField(default=today_date)
 
     def __str__(self):
         return str(self.date)
+
+    class Meta:
+        verbose_name_plural = "Park Slot"
+        verbose_name_plural = "Parking Slots"
