@@ -1,3 +1,4 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +11,8 @@
     <title>
         
         {% block title %}
-            
         {% endblock title %}
+        
             
     </title>
     <style>
@@ -31,17 +32,28 @@
 
         <ul class="nav">
             <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">{% trans 'Home' %}</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'car' %}">Cars</a>
+            <a class="nav-link" href="{% url 'car' %}">{% trans 'Cars' %}</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'space' %}">Space</a>
+            <a class="nav-link" href="{% url 'space' %}">{% trans 'Space' %}</a>
         </li>
-        
+        <li class="nav-item">
+            <form action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                <select name="language">
+                    <option value="en">English</option>
+                    <option value="ne">{% trans 'Nepali' %}</option>
+                </select>
+                <button type="submit">Change Language</button>
+            </form>
+        </li>        
     </ul>
 </div>
+
+
     {% block body %}
     
     {% endblock body %}

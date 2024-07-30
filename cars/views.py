@@ -3,10 +3,14 @@ from cars.models import *
 from cars.forms import *
 from datetime import date
 from django.contrib import messages
+from django.utils.translation import gettext as _
+from django.http import HttpResponse
 
 def today_date():
     return date.today()
-
+def my_view(request):
+    message = _("Welcome to my site!")
+    return HttpResponse(message)
 def car(request):
     car = Cars.objects.all()
     car_form = CarsModelForm()

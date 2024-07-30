@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-30 14:56+0545\n"
+"PO-Revision-Date: 2024-07-30 09:31+0000\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: car_parking/settings.py:116
+msgid "English"
+msgstr "अंग्रेजी"
+
+#: car_parking/settings.py:117
+msgid "Nepali"
+msgstr "नेपाली"
+
+#: cars/models.py:22
+msgid "brand_name"
+msgstr "ब्रान्ड नाम"
+
+#: cars/models.py:23
+msgid "color"
+msgstr "रंग"
+
+#: cars/models.py:24
+msgid "liscense_no"
+msgstr "लाइसेन्स नम्बर"
+
+#: cars/models.py:25
+msgid "Car_owner_name"
+msgstr "कार मालिकको नाम"
+
+#: cars/models.py:26
+msgid "car_park_status"
+msgstr "कार पार्क स्थिति"
+
+#: cars/models.py:37
+msgid "space_identity"
+msgstr "स्पेस आइडेन्टिटी"
+
+#: cars/models.py:38
+msgid "space status"
+msgstr "स्पेस स्थिति"
+
+#: cars/views.py:12 templates/home.html:5 templates/space/space.html:5
+msgid "Welcome to my site!"
+msgstr "स्पेस आइडेन्टिटी"

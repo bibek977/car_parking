@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-30 16:30+0545\n"
+"PO-Revision-Date: 2024-07-30 09:50+0000\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: car_parking/settings.py:116
+msgid "English"
+msgstr "अंग्रेजी"
+
+#: car_parking/settings.py:117 templates/base.html:48
+msgid "Nepali"
+msgstr "नेपाली"
+
+#: cars/apps.py:7
+msgid "Car Parking App"
+msgstr "गाडी पार्किङ अनुप्रयोग"
+
+#: cars/models.py:22
+msgid "brand_name"
+msgstr "ब्रान्ड नाम"
+
+#: cars/models.py:23
+msgid "color"
+msgstr "रंग"
+
+#: cars/models.py:24
+msgid "liscense_no"
+msgstr "लाइसेन्स नम्बर"
+
+#: cars/models.py:25
+msgid "Car_owner_name"
+msgstr "कार मालिकको नाम"
+
+#: cars/models.py:26
+msgid "car_park_status"
+msgstr "कार पार्क स्थिति"
+
+#: cars/models.py:32 templates/car/car.html:21
+msgid "Car"
+msgstr "गाडी"
+
+#: cars/models.py:33 templates/base.html:38
+msgid "Cars"
+msgstr "गाडीहरू"
+
+#: cars/models.py:37
+msgid "space_identity"
+msgstr "स्पेस आइडेन्टिटी"
+
+#: cars/models.py:38
+msgid "space status"
+msgstr "स्पेस स्थिति"
+
+#: cars/models.py:44 cars/models.py:45 templates/base.html:41
+#: templates/park/park.html:26 templates/space/space.html:25
+msgid "Space"
+msgstr "स्थान"
+
+#: cars/models.py:58
+msgid "Park Slot"
+msgstr "स्थिति"
+
+#: cars/models.py:59
+msgid "Parking Slots"
+msgstr "स्थिति"
+
+#: cars/views.py:12 templates/home.html:5 templates/space/space.html:5
+msgid "Welcome to my site!"
+msgstr "स्पेस आइडेन्टिटी"
+
+#: templates/base.html:35
+msgid "Home"
+msgstr "गृह"
+
+#: templates/car/car.html:22 templates/park/park.html:24
+msgid "Color"
+msgstr "रंग"
+
+#: templates/car/car.html:23 templates/park/park.html:25
+msgid "Liscense No"
+msgstr "लाइसेन्स नम्बर"
+
+#: templates/car/car.html:24
+msgid "Park Status"
+msgstr "स्थिति"
+
+#: templates/car/car.html:27 templates/park/park.html:32
+#: templates/space/space.html:29
+msgid "Create"
+msgstr "सिर्जना गर्नुहोस्"
+
+#: templates/car/car.html:48 templates/space/space.html:48
+msgid "Delete"
+msgstr "हटाउनुहोस्"
+
+#: templates/car/car.html:69 templates/park/park.html:79
+msgid "Close"
+msgstr "बन्द गर्नुहोस्"
+
+#: templates/car/car_create.html:19 templates/car/car_update.html:28
+#: templates/park/park_create.html:19 templates/park/park_update.html:28
+#: templates/space/space_create.html:20 templates/space/space_update.html:29
+msgid "Submit"
+msgstr "बुझाउनुहोस्"
+
+#: templates/park/park.html:22
+msgid "Token"
+msgstr "टोकन"
+
+#: templates/park/park.html:23
+msgid "Brand"
+msgstr "ब्रान्ड"
+
+#: templates/park/park.html:27
+msgid "Checked In"
+msgstr "चेक इन"
+
+#: templates/park/park.html:28 templates/space/space.html:26
+msgid "Status"
+msgstr "स्थिति"
+
+#: templates/park/park.html:29
+msgid "Checked Out"
+msgstr "चेक आउट"
+
+#: templates/park/park.html:52
+msgid "Active"
+msgstr "सक्रिय"
+
+#: templates/park/park.html:56
+msgid "Not Active"
+msgstr "असक्रिय"
+
+#: templates/space/space_update.html:5
+msgid "Park"
+msgstr "पार्क"

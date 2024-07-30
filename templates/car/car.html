@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load i18n %}
 
 {% block body %}
   
@@ -17,13 +17,13 @@
   <table class='table'>
     <thead>
       <tr>
-        <th scope="col">Brand</th>
-        <th scope="col">Color</th>
-        <th scope="col">Liscense No</th>
-        <th scope="col">Park Status</th>
+        <th scope="col">{% trans 'Car' %}</th>
+        <th scope="col">{% trans 'Color' %}</th>
+        <th scope="col">{% trans 'Liscense No' %}</th>
+        <th scope="col">{% trans 'Park Status' %}</th>
         <th scope="col">
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Create
+            {% trans 'Create' %}
           </button>
         </th>
       </tr>
@@ -43,7 +43,7 @@
         <td>
           <a href="{% url 'car_delete' c.id %}">
               <button type="submit" class="btn btn-danger">
-              Delete
+              {% trans 'Delete' %}
             </button>
             </a>
         </td>
@@ -64,7 +64,7 @@
           {% include 'car/car_create.html' %}
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans 'Close' %}</button>
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load i18n %}
 
 {% block body %}
   
@@ -18,17 +18,17 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Token</th>
-        <th scope="col">Brand</th>
-        <th scope="col">Color</th>
-        <th scope="col">Liscense No</th>
-        <th scope="col">Space</th>
-        <th scope="col">Checked In</th>
-        <th scope="col">Status</th>
-        <th scope="col">Checked Out</th>
+        <th scope="col">{% trans 'Token' %}</th>
+        <th scope="col">{% trans 'Brand' %}</th>
+        <th scope="col">{% trans 'Color' %}</th>
+        <th scope="col">{% trans 'Liscense No' %}</th>
+        <th scope="col">{% trans 'Space' %}</th>
+        <th scope="col">{% trans 'Checked In' %}</th>
+        <th scope="col">{% trans 'Status' %}</th>
+        <th scope="col">{% trans 'Checked Out' %}</th>
         <th scope="col">
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Create
+            {% trans 'Create' %}
           </button>
         </th>
       </tr>
@@ -48,11 +48,11 @@
           <a href="{% url 'park_delete' park.id %}">
             {% if park.status %}
             <button type="submit" class="btn btn-danger">
-              Active
+              {% trans 'Active' %}
             </button>
             {% else %}
             <button type="submit" class="btn btn-success">
-              Not Active
+              {% trans 'Not Active' %}
             </button>
             {% endif %}
           </a>
@@ -75,7 +75,7 @@
           {% include 'park/park_create.html' %}
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans 'Close' %}</button>
       </div>
     </div>
   </div>

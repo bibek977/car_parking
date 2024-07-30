@@ -12,5 +12,6 @@ urlpatterns = [
     path('park/update/<str:pk>',park_update,name='park_update'),
     # path('park/delete/<str:pk>',park_delete,name='park_delete'),
     path('park/delete/<str:pk>',park_out,name='park_delete'),
-    path('clear/',clear_all,name='clear_all')
+    path('clear/',clear_all,name='clear_all'),
+    path("my_view",my_view,name='my_view')
 ]

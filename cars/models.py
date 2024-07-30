@@ -29,8 +29,8 @@ class Cars(BaseModel):
         return self.liscense_no
     
     class Meta:
-        verbose_name_plural = "Car"
-        verbose_name_plural = "Cars"
+        verbose_name = _("Car")
+        verbose_name_plural = _("Cars")
 
 
 class Space(BaseModel):
@@ -41,8 +41,8 @@ class Space(BaseModel):
         return self.space_box
 
     class Meta:
-        verbose_name_plural = "Space"
-        verbose_name_plural = "Space"
+        verbose_name = _("Space")
+        verbose_name_plural = _("Space")
 
 class ParkSlot(BaseModel):
     car = models.ForeignKey(Cars,on_delete=models.CASCADE)
@@ -55,8 +55,8 @@ class ParkSlot(BaseModel):
         return str(self.date)
 
     class Meta:
-        verbose_name_plural = "Park Slot"
-        verbose_name_plural = "Parking Slots"
+        verbose_name_plural = _("Park Slot")
+        verbose_name_plural = _("Parking Slots")
 
 @receiver(post_save, sender=ParkSlot)
 def parked_in(sender,instance,created,**kwargs):

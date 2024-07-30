@@ -1,8 +1,8 @@
 {% extends "base.html" %}
-
+{% load i18n %}
 
 {% block title %}
-    Car Parking
+{% trans "Welcome to my site!" %}
 {% endblock title %}
     
 
@@ -21,11 +21,11 @@
   <table class='table'>
     <thead>
       <tr>
-        <th scope="col">Space</th>
-        <th scope="col">Status</th>
+        <th scope="col">{% trans 'Space' %}</th>
+        <th scope="col">{% trans 'Status' %}</th>
         <th scope="col">
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Create
+            {% trans 'Create' %}
           </button>
         </th>
       </tr>
@@ -43,7 +43,7 @@
         <td>
           <a href="{% url 'space_delete' space.id %}">
               <button type="submit" class="btn btn-danger">
-              Delete
+              {% trans 'Delete' %}
             </button>
             </a>
         </td>

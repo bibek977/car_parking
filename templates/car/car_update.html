@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load i18n %}
 
 {% block title %}
     Cars
@@ -25,7 +25,7 @@
               {% endfor %}
           </div>
           {% endfor %}
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary">{% trans 'Submit' %}</button>
         </form>
     </div>
     </div>
